@@ -1,0 +1,34 @@
+<nav class="navbar navbar-light navbar-expand-lg navigation-clean-button">
+  <div class="container">
+    <a class="navbar-brand" href="/" style="color: black"
+      >Hotel <Span style="color: red">Junction</Span></a
+    ><button
+      class="navbar-toggler"
+      data-bs-toggle="collapse"
+      data-bs-target="#navcol-1"
+    >
+      <span class="visually-hidden">Toggle navigation</span
+      ><span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navcol-1" class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/hotels/new">Add New</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/hotels">All Hotels</a>
+        </li>
+      </ul>
+      <span class="navbar-text actions">
+        <% if(!currentUser){ %>
+        <a class="login" href="/login">Log In</a>
+        <a class="btn btn-light action-button" role="button" href="/register"
+          >Sign Up</a
+        >
+        <%} else {%>
+        <a class="login" href="/logout">Log Out</a>
+        <% }%>
+      </span>
+    </div>
+  </div>
+</nav>
